@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 /// <summary>
 /// 캐릭터 조작 관련 스크립트
 /// </summary>
@@ -22,6 +23,7 @@ public class Controll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject() == true) return; // UI창 나오면 클릭 금지
         if (Input.GetMouseButtonDown(0))
         {
             targetpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

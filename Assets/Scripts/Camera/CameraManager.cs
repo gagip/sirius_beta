@@ -28,7 +28,7 @@ public class CameraManager : MonoBehaviour
     {
         if (target.gameObject != null)
         {
-            targetPosition.Set(target.transform.position.x, target.transform.position.y + 1f, this.transform.position.z); // z값은 카메라 값으로
+            targetPosition.Set(target.transform.position.x,this.transform.position.y, this.transform.position.z); // z값은 카메라 값으로
 
             this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }

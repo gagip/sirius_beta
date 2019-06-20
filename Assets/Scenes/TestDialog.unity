@@ -446,6 +446,7 @@ MonoBehaviour:
   txtf: scene1
   txt: {fileID: 326331241}
   panel: {fileID: 1393451898}
+  skipButton: {fileID: 1354559231}
 --- !u!1 &773389499
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -397.1, y: -172.3}
+  m_AnchoredPosition: {x: -401, y: -179}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1354559230
@@ -666,6 +667,7 @@ GameObject:
   - component: {fileID: 1387859385}
   - component: {fileID: 1387859384}
   - component: {fileID: 1387859387}
+  - component: {fileID: 1387859388}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -707,7 +709,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -751,6 +753,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 217425175}
   moveSpeed: 3
+--- !u!114 &1387859388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387859383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6650a4c53e44e499a490507cf250a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraSizePlus: 5
+  cameraSizeMinus: 10
+  cameraSpeed: 0.5
+  dialoguePanel: {fileID: 1393451898}
 --- !u!1 &1393451896
 GameObject:
   m_ObjectHideFlags: 0

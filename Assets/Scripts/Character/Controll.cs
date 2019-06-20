@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 /// </summary>
 public class Controll : MonoBehaviour
 {
+    private Controll instance = null;
     public float speed; // 캐릭터 이동 속도
     public float error; // 캐릭터와 마우스 좌표와의 오차 범위
 
@@ -17,7 +18,16 @@ public class Controll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        print(instance);
+        if (instance == null)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     // Update is called once per frame

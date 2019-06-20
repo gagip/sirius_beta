@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Button : MonoBehaviour
-{ 
+{
+    public GameObject npc;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,9 @@ public class Button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-   
+        Vector3 vector; 
+        vector = transform.position;
+        vector.x = npc.GetComponent<Transform>().position.x; 
+        transform.position = vector; 
     }
 }

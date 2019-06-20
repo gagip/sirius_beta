@@ -9,7 +9,7 @@ NPC가 생성될 때 상호작용 오브젝트도 생성 >> start 함수
 */
 public class NPC : MonoBehaviour
 {
-    public GameObject rose;
+    public GameObject diaBox;
     public GameObject Mary;
     //private void ontriggerenter2d(Collider2D col)
     //{
@@ -36,11 +36,11 @@ public class NPC : MonoBehaviour
         Debug.Log(mary_pos);
         if ( Mathf.Abs(mary_pos - obj_pos) < 4)   // 마사 근처에 가면 대화버튼이 뜨게 함
         {
-            rose.SetActive(true);
+            diaBox.SetActive(true);
         }
         else
         {
-            rose.SetActive(false);
+            diaBox.SetActive(false);
         }
     }
 

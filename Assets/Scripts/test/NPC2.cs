@@ -7,7 +7,7 @@ NPC가 생성될 때 상호작용 오브젝트도 생성 >> start 함수
 메리와의 거리가 일정거리 안에 메리라는 오브젝트의 위치 m  위치하면 다이얼로그 오브젝트 띄움 >> update 함수, 
  npc의 x 좌표 n, 메리의 x좌표 m 이라고 할 때, npc 위치의 5이하로 접근하면 반응. 즉 n-5 < m < n+5 일 경우 오브젝트 obj.active = true;
 */
-public class NPC : MonoBehaviour
+public class NPC2 : MonoBehaviour
 {
     public GameObject rose;
     public GameObject Mary;

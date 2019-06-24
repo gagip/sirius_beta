@@ -9,6 +9,12 @@ public class CameraManager : MonoBehaviour
     public float moveSpeed; // 카메라가 얼마나 빠른 속도로
     private Vector3 targetPosition; // target의 위치
 
+
+
+
+
+
+
     // Start is called before the first frame update 
     void Start()
     {
@@ -23,8 +29,12 @@ public class CameraManager : MonoBehaviour
         }
     }
 
+    
+    
+
+
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (target.gameObject != null)
         {
@@ -32,6 +42,7 @@ public class CameraManager : MonoBehaviour
 
             this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }
+
 
     }
 }

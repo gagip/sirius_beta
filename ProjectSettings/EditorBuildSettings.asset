@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestTeleport.unity
     guid: b2c6ca94895e7f342bd49fdd42d2ac79
+  - enabled: 1
+    path: Assets/Scenes/Test2.unity
+    guid: 1319309bff3124dcfb0683fccb8b1c20
   m_configObjects: {}

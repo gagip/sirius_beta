@@ -15,9 +15,10 @@ public class NPC : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Mary")
+        if (other.tag == "Ben")
         {
             box.SetActive(false);
+            Camera.main.GetComponent<Status>().BenChatTimes++;
         }
     }
 

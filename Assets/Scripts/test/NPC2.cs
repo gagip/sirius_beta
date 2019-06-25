@@ -8,13 +8,19 @@ object와 mary가 상호작용 가능한 거리에 있을 때 상호작용 박�
 public class NPC2 : MonoBehaviour
 {
     public GameObject box;
+    Vector3 v1 = new Vector3();
     private void OnTriggerStay2D(Collider2D col)    // mary가 상호작용 가능 범위 일 때
     {
         if (col.tag == "Mary")
         {
+
+            v1 =  col.GetComponent<Transform>().position;
+            v1.y = v1.y + 4f;
+            box.GetComponent<RectTransform>().position = v1;
             box.SetActive(true);
+            
         }
-     
+        
     }
 
     private void OnTriggerExit2D(Collider2D col)    // mary가 상호작용 가능 범위 벗어날 때
@@ -29,6 +35,7 @@ public class NPC2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        box.SetActive(false);
     }
 
     // Update is called once per frame

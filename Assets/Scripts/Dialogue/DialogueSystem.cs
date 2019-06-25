@@ -13,9 +13,9 @@ public class DialogueSystem : MonoBehaviour
     private int count = 0; // 텍스트 문서 단위
     private bool isDialogue = false; // 텍스트 UI 활성화 트리거
 
-    Vector3 txtPlayer; // 플레이어 쪽 텍스트 위치
-    Vector3 txtNPC; // NPC 쪽 텍스트 위치
-
+    Vector3 txtPlayer = new Vector3(); // 플레이어 쪽 텍스트 위치
+    Vector3 txtNPC = new Vector3(); // NPC 쪽 텍스트 위치
+    Vector3 cameraView = new Vector3();
     public float delay = 0.01f;
     string fulltext;
 
@@ -48,7 +48,11 @@ public class DialogueSystem : MonoBehaviour
         OnOff(false);
         isDialogue = false;
     }
-    
+
+
+
+
+
     private void NextDialogue()
     {
         fulltext = (string)dialogue[count]["dialog"];
@@ -62,7 +66,7 @@ public class DialogueSystem : MonoBehaviour
         }
         if ((int)dialogue[count]["name"] == 2)
         {
-            txt.color = Color.black;
+            txt.color = Color.blue;
             txt.fontSize = 14;
             txt.GetComponent<RectTransform>().position = txtNPC;
             print(txt.GetComponent<RectTransform>().position);
@@ -73,18 +77,20 @@ public class DialogueSystem : MonoBehaviour
 
     public void SetDialoguePosition(string npcName)
     {
-        Vector3 v1 = new Vector3(0, 0);
-        Vector3 v2 = GameObject.FindWithTag("Player").GetComponent<Transform>().position;
-        Vector3 v3 = GameObject.FindWithTag(npcName).GetComponent<Transform>().position;
+
+        cameraView = Camera.main.GetComponent<Transform>().position;
+        Vector3 v1 = cameraView;
+        Vector3 v2 = GameObject.FindWithTag("Mary").GetComponent<Transform>().position;
+        Vector3 v3 = GameObject.FindWithTag("Mary").GetComponent<Transform>().position;
         
         if (v2.x - v3.x < 0) // 플레이어가 왼쪽에 있을 시
         {
-            txtPlayer = new Vector3(v2.x - 3f, v2.y + 4f);
+            txtPlayer = new Vector3(v2.x - 3f, v2.y);
             txtNPC = new Vector3(v3.x + 3f, v2.y + 4f);
         }
         else
         {
-            txtPlayer = new Vector3(v2.x + 3f, v2.y + 4f);
+            txtPlayer = new Vector3(v2.x + 3f, v2.y);
             txtNPC = new Vector3(v3.x - 3f, v2.y + 4f);
         }
     }
@@ -106,7 +112,7 @@ public class DialogueSystem : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                
+                //cameraView = Camera.main.GetComponent<Transform>().position;
                 if (count < dialogue.Count)
                 {
                     NextDialogue();

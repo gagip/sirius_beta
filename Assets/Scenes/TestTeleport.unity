@@ -349,7 +349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9726156fa2d782e4c9b6a55fd6dc198f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instance: {fileID: 217425176}
   speed: 5
   error: 0.5
 --- !u!212 &217425177
@@ -699,6 +698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4571082e0f79c947a0da6b93d649afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: TestNPC
 --- !u!212 &511302592
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -915,7 +915,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280028601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.74, y: -1.84, z: 0}
+  m_LocalPosition: {x: -0.76, y: -1.71, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -972,6 +972,7 @@ GameObject:
   - component: {fileID: 1387859385}
   - component: {fileID: 1387859384}
   - component: {fileID: 1387859387}
+  - component: {fileID: 1387859388}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1057,3 +1058,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 217425175}
   moveSpeed: 3
+--- !u!114 &1387859388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387859383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30a53641731a493785b5915d8561bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarsaChatTimes: 0
+  BenChatTimes: 0
+  teleportTimes: 0

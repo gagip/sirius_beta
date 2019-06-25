@@ -5,10 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class changeScene : MonoBehaviour
 {
+
+    public string sceneName = "TestNPC";
     public void changeFirstScene()
     {
-        SceneManager.LoadScene("TestNPC");
+        SceneManager.LoadScene(sceneName);
+        Camera.main.GetComponent<Status>().teleportTimes++;
     }
+    public void changeSecondScene()
+    {
+        SceneManager.LoadScene("TestNPC");
+        Camera.main.GetComponent<Status>().teleportTimes++;
+    }
+
 
     // Start is called before the first frame update
     void Start()

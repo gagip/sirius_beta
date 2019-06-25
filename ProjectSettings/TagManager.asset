@@ -5,8 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mary
+<<<<<<< HEAD
   - Ben
   - Marsa
+=======
+  - Medlock
+>>>>>>> dd24f380ab19d778a01c6c53bbcea8a8b78a4538
   layers:
   - Default
   - TransparentFX
@@ -44,9 +48,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: background
+  - name: Background
     uniqueID: 1130688845
     locked: 0
-  - name: character
+  - name: Character
     uniqueID: 221869995
+    locked: 0
+  - name: Interaction
+    uniqueID: 4199150721
+    locked: 0
+  - name: Dialogue
+    uniqueID: 3411397877
     locked: 0

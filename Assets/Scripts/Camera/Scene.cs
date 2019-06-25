@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class changeScene : MonoBehaviour
+public class Scene : MonoBehaviour
 {
 
     public string sceneName = "TestNPC";
@@ -28,5 +28,9 @@ public class changeScene : MonoBehaviour
     void Update()
     {
         
+    }
+    public void SceneChange(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

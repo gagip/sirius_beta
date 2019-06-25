@@ -6,6 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/TestNPC.unity
     guid: 5e1e187dddfeb1a4bbc84a65d090a6eb
   - enabled: 1
@@ -14,4 +15,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test2.unity
     guid: 1319309bff3124dcfb0683fccb8b1c20
+=======
+    path: Assets/Scenes/Test Scenes/TestNPC.unity
+    guid: 5e1e187dddfeb1a4bbc84a65d090a6eb
+  - enabled: 1
+    path: Assets/Scenes/Test Scenes/TestTeleport.unity
+    guid: b2c6ca94895e7f342bd49fdd42d2ac79
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Start.unity
+    guid: f93cdb853bdc26341b12aa84122bc02e
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Scene1.unity
+    guid: 2367eee4c731f6049bad210739d6e277
+>>>>>>> dd24f380ab19d778a01c6c53bbcea8a8b78a4538
   m_configObjects: {}

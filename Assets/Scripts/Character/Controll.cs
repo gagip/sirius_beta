@@ -18,7 +18,10 @@ public class Controll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         print(instance);
+=======
+>>>>>>> dd24f380ab19d778a01c6c53bbcea8a8b78a4538
         if (instance == null)
         {
             DontDestroyOnLoad(this.gameObject);

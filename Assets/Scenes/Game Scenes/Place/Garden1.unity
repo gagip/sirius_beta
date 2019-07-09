@@ -112,6 +112,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &1347360245
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5375564151099632226, guid: c7c2b9495b711564687c23bb958f25fd,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375564151099632236, guid: c7c2b9495b711564687c23bb958f25fd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375564151099632236, guid: c7c2b9495b711564687c23bb958f25fd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375564151099632236, guid: c7c2b9495b711564687c23bb958f25fd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375564151099632236, guid: c7c2b9495b711564687c23bb958f25fd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375564151099632236, guid: c7c2b9495b711564687c23bb958f25fd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375564151099632236, guid: c7c2b9495b711564687c23bb958f25fd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375564151099632236, guid: c7c2b9495b711564687c23bb958f25fd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375564151099632236, guid: c7c2b9495b711564687c23bb958f25fd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375564151099632236, guid: c7c2b9495b711564687c23bb958f25fd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375564151099632236, guid: c7c2b9495b711564687c23bb958f25fd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375564151099632236, guid: c7c2b9495b711564687c23bb958f25fd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c7c2b9495b711564687c23bb958f25fd, type: 3}
 --- !u!1 &1644706289
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,16 +412,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2005473491500685848, guid: 746c28a2a8860d4459d15859c0d936f9,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -300692257
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005473491500685848, guid: 746c28a2a8860d4459d15859c0d936f9,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8013437081200219953, guid: 746c28a2a8860d4459d15859c0d936f9,
         type: 3}
       propertyPath: speed
@@ -368,6 +427,16 @@ PrefabInstance:
       propertyPath: characterBox
       value: 
       objectReference: {fileID: 1811585687}
+    - target: {fileID: 2005473491500685848, guid: 746c28a2a8860d4459d15859c0d936f9,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -300692257
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005473491500685848, guid: 746c28a2a8860d4459d15859c0d936f9,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746c28a2a8860d4459d15859c0d936f9, type: 3}
 --- !u!61 &1811585687 stripped

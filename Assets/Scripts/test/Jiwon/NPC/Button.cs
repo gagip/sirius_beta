@@ -22,7 +22,7 @@ public class Button : MonoBehaviour
     private void OnMouseDown()
     {
        npc.GetComponent<DialogueSystem>().ShowDialogue();
-
+        GameManager.instance.accessibleScene.Add("Hall");
         //gameObject.SetActive(false);
     }
     

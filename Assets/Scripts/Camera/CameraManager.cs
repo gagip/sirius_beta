@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 타겟을 따라가는 카메라 스크립트
+/// </summary>
 public class CameraManager : MonoBehaviour
 {
     static public CameraManager instance;
@@ -20,6 +23,7 @@ public class CameraManager : MonoBehaviour
 
     private Camera getCamera;
 
+    
 
     public void SetBound(BoxCollider2D newBound)
     {
@@ -30,6 +34,7 @@ public class CameraManager : MonoBehaviour
 
     private void Awake()
     {
+        // 도플갱어 삭제
         if (instance == null)
         {
             DontDestroyOnLoad(this.gameObject);
@@ -57,6 +62,7 @@ public class CameraManager : MonoBehaviour
     {
         boundBox = GameObject.FindGameObjectWithTag("Background").GetComponent<BoxCollider2D>();
         target = GameObject.FindGameObjectWithTag("Mary");
+
         getCamera = GetComponent<Camera>();
         minBound = boundBox.bounds.min;
         maxBound = boundBox.bounds.max;
@@ -67,6 +73,7 @@ public class CameraManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 타겟 따라가기
         if (target.gameObject != null)
         {
             targetPosition.Set(target.transform.position.x, target.transform.position.y, this.transform.position.z);

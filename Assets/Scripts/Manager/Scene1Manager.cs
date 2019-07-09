@@ -24,7 +24,7 @@ public class Scene1Manager : MonoBehaviour
     public int process; // 진행사항 체크
     public bool showDialogue = false;
     private EventDialogueSystem eventDialogueSystem;
-    int count = 0;
+    int clickCount = 0;
     
 
     private void Awake()
@@ -74,8 +74,8 @@ public class Scene1Manager : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 // count를 넣는 이유는 대화 종료 후, 한 번 더 클릭하면 다음 씬으로 갈 수 있게 임시방편
-                count++;
-                if (count > 2)
+                clickCount++;
+                if (clickCount >= 1)
                 {
                     // 만일 인트로가 끝나가면 Scene1Manager도 삭제한다. 
                     if (process == scene1DB.Length-1) 
@@ -87,7 +87,7 @@ public class Scene1Manager : MonoBehaviour
                     {
                         SceneChange(scene1DB[process].nextSceneName);
                         showDialogue = false;
-                        count = 0;
+                        clickCount = 0;
                         process++;
                     }
                 }

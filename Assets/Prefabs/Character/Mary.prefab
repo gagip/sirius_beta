@@ -11,12 +11,10 @@ GameObject:
   - component: {fileID: 7209102992699074427}
   - component: {fileID: 2005473491500685848}
   - component: {fileID: 6983787397123679675}
+  - component: {fileID: 5056805484060261336}
   - component: {fileID: 7758020882689986435}
   - component: {fileID: 7889691863593573343}
-  - component: {fileID: 6480918356968597092}
   - component: {fileID: 8437957459866376714}
-  - component: {fileID: 1126315387866706419}
-  - component: {fileID: 8013437081200219953}
   m_Layer: 0
   m_Name: Mary
   m_TagString: Mary
@@ -72,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 221869995
-  m_SortingLayer: 0
+  m_SortingLayerID: -300692257
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ee11f36b7dd429442b94e984558a8d0a, type: 3}
   m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
@@ -112,6 +110,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.75, y: 9.74}
   m_EdgeRadius: 0
+--- !u!114 &5056805484060261336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581655222144050879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d00db2322847434c8b45d579a092f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  error: 0.5
+  boundBox: {fileID: 0}
+  characterBox: {fileID: 0}
 --- !u!114 &7758020882689986435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,22 +159,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6480918356968597092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6581655222144050879}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a82e3232f640940aadc6bac661ae79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveit: 0
-  boundBox: {fileID: 0}
-  characterBox: {fileID: 0}
-  speed: 20
 --- !u!114 &8437957459866376714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,35 +175,3 @@ MonoBehaviour:
   boundBox: {fileID: 0}
   characterBox: {fileID: 0}
   speed: 0
---- !u!114 &1126315387866706419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6581655222144050879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc5539cc1df7f546880a839b1947663, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  error: 0.5
-  boundBox: {fileID: 0}
-  characterBox: {fileID: 0}
---- !u!114 &8013437081200219953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6581655222144050879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9726156fa2d782e4c9b6a55fd6dc198f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  error: 0.5
-  boundBox: {fileID: 0}
-  characterBox: {fileID: 0}

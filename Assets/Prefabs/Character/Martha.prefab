@@ -129,7 +129,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3558919865715468664}
   - component: {fileID: 3558919865715468665}
-  - component: {fileID: 3558919865715468666}
+  - component: {fileID: 7411341965888665752}
+  - component: {fileID: 774459259187540973}
   m_Layer: 0
   m_Name: Martha
   m_TagString: Martha
@@ -189,7 +190,7 @@ SpriteRenderer:
   m_SortingLayerID: -300692257
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e66fdf38b5132814187e63df446d84d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36465ccd134cf49799d634a2cfa5f174, type: 3}
   m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -200,7 +201,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3558919865715468666
+--- !u!114 &7411341965888665752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3558919865715468667}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b722bd80ee7d53c409eef5dced4f953e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtf: 
+  delay: 0.01
+  error: 8
+--- !u!114 &774459259187540973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,11 +225,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3558919865715468667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66359ce06737904488d414696e0ea134, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f5e7eafb578cce439bc4100573b77fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtFile: Scene1_2
+  controll: {fileID: 0}
+  txtFile: 
+  count: 0
+  allText: 0
   setTextPosition: 0
-  dialogueTextPosion:
-    txtPlayer: {x: -150, y: 200, z: 0}
-    txtNPC: {x: 150, y: 200, z: 0}
+  userDialogueTextPosion:
+    txtPlayer: {x: -450, y: 550, z: 0}
+    txtNPC: {x: 450, y: 550, z: 0}

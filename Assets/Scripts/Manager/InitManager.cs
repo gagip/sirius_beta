@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Advertisements;
 
+/// <summary>
+/// 게임 ㄴ
+/// </summary>
 public class InitManager : MonoBehaviour
 {
 

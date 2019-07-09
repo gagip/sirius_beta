@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 /// <summary>
 /// 대화 이외의 대사를 출력할 때 사용하는 스크립트
 /// 인트로 씬 위주로 사용
 /// </summary>
+
 [System.Serializable]
 public class EventDialogueTextPosion
 {

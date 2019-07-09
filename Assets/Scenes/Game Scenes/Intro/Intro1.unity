@@ -418,6 +418,9 @@ MonoBehaviour:
   - dataName: "\uAC70\uC758 \uB3C4\uCC29"
     nextSceneName: Intro3
     textFile: Scene1_3
+  - dataName: "\uAC8C\uC784 \uD654\uBA74"
+    nextSceneName: MaryRoom
+    textFile: null
   process: 0
   showDialogue: 0
 --- !u!4 &1672265084
@@ -522,6 +525,6 @@ MonoBehaviour:
   talking: 0
   setTextPosition: 1
   eventDialogueTextPosion:
-    txtPlayer: {x: 150, y: -50, z: 0}
-    txtNPC: {x: -150, y: 150, z: 0}
+    txtPlayer: {x: -400, y: -100, z: 0}
+    txtNPC: {x: -400, y: 400, z: 0}
   scene1Manager: {fileID: 0}

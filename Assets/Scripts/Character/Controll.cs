@@ -23,6 +23,9 @@ public class Controll : MonoBehaviour
     private float rightButtonSec;
     private float leftButtonSec;
 
+    private Animator animator;   // 애니메이션 동작을 위한 선언  
+    private GameObject dialoguePanel;   // 대화 UI 가 실행중인지 파악하기 위한 변수(setActive 사용해 구별)
+
     private void Awake()
     {
         if (instance == null)
@@ -44,7 +47,8 @@ public class Controll : MonoBehaviour
         float screenHeight = Screen.height; // 스크린 높이
         float screenWidth = Screen.width;   // 스크린 넓이
 
-
+        animator = gameObject.GetComponent<Animator>(); // 메리의 animator component를 받아옴
+        dialoguePanel = GameObject.Find("Dialogue UI").transform.Find("Dialogue Panel").gameObject; // 대화 패널 오브젝트를 받아옴
 
         halfWidth = (characterBox.size.x) / 2f;
         rightButtonSec = (screenWidth / 4) * 3;
@@ -70,9 +74,14 @@ public class Controll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsPointerOverUIObject()) return; // UI창 나오면 클릭 금지
+        //if (EventSystem.current.IsPointerOverGameObject() == true) return; // UI창 나오면 클릭 금지
+        //if (IsPointerOverUIObject()) return; // UI창 나오면 클릭 금지
+        if (dialoguePanel.activeSelf)
+        {
+            animator.SetBool("isWalking", false);   // 움직이지 않는 동안 idle 상태 애니메이션
+            return;
+        }
 
-        
         if (Input.GetMouseButtonDown(0))
         {
             targetpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -81,6 +90,7 @@ public class Controll : MonoBehaviour
         }
         if (moveit)
         {
+            animator.SetBool("isWalking", true);    // 움직이는 동안 walk 상태 애니메이션
             float dis = targetpos.x - transform.position.x; // 마우스 좌표 - 현재 캐릭터 좌표
             if (Mathf.Abs(dis) <= error)
             {
@@ -96,6 +106,10 @@ public class Controll : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, 180, 0);
                 transform.Translate(Vector3.right * speed * Time.deltaTime);
             }
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);   // 움직이지 않는 동안 idle 상태 애니메이션
         }
     }
 }

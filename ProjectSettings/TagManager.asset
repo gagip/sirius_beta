@@ -9,6 +9,15 @@ TagManager:
   - Portal
   - item
   - Background
+  - Martha
+  - Stairs
+  - Floor
+  - Trigger
+  - RightStairs
+  - LeftStairs
+  - UpOrDown
+  - DownStair
+  - UpStair
   layers:
   - Default
   - TransparentFX

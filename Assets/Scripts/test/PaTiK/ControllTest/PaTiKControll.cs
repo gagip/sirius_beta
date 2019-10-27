@@ -12,6 +12,9 @@ public class PaTiKControll : MonoBehaviour
 
 
     public bool moveit = false; // 이동 가능 여부
+    public bool rightButtonOn;
+    public bool leftButtonOn;
+    public bool upperButtonOn;
 
     public BoxCollider2D boundBox;  // 맵 바운더리 지정
     public BoxCollider2D characterBox;// 캐릭터 바운더리 지정
@@ -24,7 +27,8 @@ public class PaTiKControll : MonoBehaviour
     private float rightButtonSec;
     private float leftButtonSec;
     public float speed; // 캐릭터 이동 속도
-
+    private float screenHeight;
+    private float screenWidth;
 
     //---------------------------------------------------------------------------------------------
 
@@ -37,8 +41,8 @@ public class PaTiKControll : MonoBehaviour
 
         halfWidth = (characterBox.size.x) / 2f;
 
-        float screenHeight = Screen.height; // 스크린 높이
-        float screenWidth = Screen.width;   // 스크린 넓이
+        screenHeight = Screen.height; // 스크린 높이
+        screenWidth = Screen.width;   // 스크린 넓이
         //---------------------------------------------------------------------------------------------
 
 
@@ -73,35 +77,46 @@ public class PaTiKControll : MonoBehaviour
         //---------------------------------------------------------------------------------------------
 
         if (EventSystem.current.IsPointerOverGameObject() == true) return; // UI창 나오면 클릭 금지
+
+        //---------------------------------------------------------------------------------------------
+
         if (Input.GetMouseButton(0))
         {
             targetpos = Input.mousePosition; // 클릭시 스크린에서의 마우스 포지션
 
-            moveit = true;
-        }
+            float posX = targetpos.x; // 마우스 X좌표
+            float posY = targetpos.y; // 마우스 Y좌표
 
-        else
-        {
-            moveit = false;
-        }
-
-        //---------------------------------------------------------------------------------------------
-
-        if (moveit)
-        {
-            float dis = targetpos.x; // 마우스 클릭지점
-
-            if (dis > rightButtonSec)
+            if (posX > rightButtonSec)
             {
+                moveit = true;
+                rightButtonOn = true;
+                leftButtonOn = false;
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 GetComponent<Rigidbody2D>().AddForce(Vector3.right * speed);
             }
-            else if (dis < leftButtonSec) // 플레이어 터치 가능위치 제한, 캐릭터 이동위치 제한
+            else if (posX < leftButtonSec) // 플레이어 터치 가능위치 제한, 캐릭터 이동위치 제한
             {
-
+                moveit = true;
+                rightButtonOn = false;
+                leftButtonOn = true;
                 transform.eulerAngles = new Vector3(0, 180, 0);
                 GetComponent<Rigidbody2D>().AddForce(Vector3.left * speed);
             }
+            
+            if(moveit && posY > screenHeight / 2)
+            {
+                upperButtonOn = true;
+            }
+
+        }
+        else
+        {
+            moveit = false;
+
+            rightButtonOn = false;
+            leftButtonOn = false;
+            upperButtonOn = false;
         }
         //---------------------------------------------------------------------------------------------
     }
